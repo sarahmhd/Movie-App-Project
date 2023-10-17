@@ -1,0 +1,74 @@
+.img_poster,
+.poster {
+  height: 100%;
+  min-height: 500px;
+}
+p {
+  font-size: 14px;
+}
+
+.production-company img {
+  width: 100%;
+  height: auto;
+}
+
+.details-content {
+  padding: 2.31rem 0;
+  border-bottom: 0.0625rem solid #cfcfcf;
+}
+
+.details .original_title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.details .release_date {
+  color: #858585;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.rating {
+  gap: 1.3rem;
+  margin: 1.31rem 0;
+}
+
+.rating p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.overview {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #ffe353 !important;
+  padding: 0.57rem 2rem !important;
+  margin-bottom: 1.19rem !important;
+}
+
+.production-company .img {
+  height: 2.9375rem;
+}
+
+.heart-icon {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.heart-icon.gold {
+  color: var(--main-color);
+}
+
+.star-icon {
+  font-size: 20px;
+}
+
+.website {
+  width: fit-content;
+}
