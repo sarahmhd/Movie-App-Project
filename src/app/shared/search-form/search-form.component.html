@@ -1,1 +1,16 @@
-<p>search-form works!</p>
+<form
+  class="d-flex m-auto"
+  #searchForm="ngForm"
+  (ngSubmit)="directToSearchPage(searchForm)"
+>
+  <input
+    class="form-control me-1"
+    type="search"
+    placeholder="Search"
+    aria-label="Search"
+    ngModel
+    name="search"
+    #searchInput="ngModel"
+  />
+  <button class="btn btn-warning" type="submit">Search</button>
+</form>

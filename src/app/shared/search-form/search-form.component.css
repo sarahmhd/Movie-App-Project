@@ -1,0 +1,10 @@
+form input {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+form input::placeholder {
+  color: #adadad;
+  font-size: 0.875rem;
+}
