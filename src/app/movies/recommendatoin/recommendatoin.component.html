@@ -1,1 +1,22 @@
-<p>recommendatoin works!</p>
+<div class="recommindation">
+  <div class="container">
+    <h2>Recommendations</h2>
+    <div class="row">
+      <div
+        class="col-sm-6 col-md-4 col-lg-2"
+        *ngFor="
+          let movie of recommendation
+
+        "
+        [ngClass]="
+          movie.poster_path || movie.backdrop_path ? 'd-block' : 'd-none'
+        "
+      >
+        <app-movie-card [movie]="movie" *ngIf="movie"></app-movie-card>
+      </div>
+      <!-- <p [ngClass]="{ 'd-none': isRecommend == true }" class="fs-6 opacity-50">
+        there is no recommendations
+      </p> -->
+    </div>
+  </div>
+</div>
