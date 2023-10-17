@@ -1,33 +1,58 @@
-<div class="card border-0">
+<div class="card border-0" [id]="movie.id">
   <div class="img">
     <img
-      src="https://image.tmdb.org/t/p/w500//5gzzkR7y3hnY8AD1wXjCnVlHba5.jpg"
+      *ngIf="movie.poster_path"
+      [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path"
       class="card-img"
+      [alt]="movie.original_title"
+    />
+    <img
+      *ngIf="!movie.poster_path"
+      [src]="'https://image.tmdb.org/t/p/w500/' + movie.backdrop_path"
+      class="card-img"
+      [alt]="movie.original_title"
     />
     <div class="dots">
       <fa-icon [icon]="faEllipsis"></fa-icon>
     </div>
     <div class="progress blue">
       <span class="progress-left">
-        <span class="progress-bar"></span>
+        <span
+          class="progress-bar"
+          [attr.data-progress]="movie.vote_average * 10"
+        ></span>
       </span>
       <span class="progress-right">
         <span class="progress-bar"></span>
       </span>
-      <div class="progress-value">90%</div>
+      <div class="progress-value">{{ movie.vote_average / 10 | percent }}</div>
     </div>
   </div>
   <div class="card-body my-3">
     <h5 class="card-title fw-bold">
-      <a class="text-decoration-none text-black"> movie title </a>
+      <a
+        [routerLink]="['/movie-details', movie.id]"
+        routerLinkActive="router-link-active"
+        class="text-decoration-none text-black"
+      >
+        {{ movie.original_title.slice(0, 15) }}
+      </a>
     </h5>
     <div class="card-Texts d-flex justify-content-between align-items-center">
-      <p class="card-text date text-muted m-0">29 sep , 2023</p>
-      <fa-icon
-        class="icon gold"
-        (click)="checkAdded()"
-        [icon]="goldenHeart"
-      ></fa-icon>
+      <p class="card-text date text-muted m-0">
+        {{ movie.release_date | date }}
+      </p>
+      <div *ngIf="movie?.isAdded; then thenBlock2; else elseBlock2"></div>
+      <ng-template #thenBlock2>
+        <fa-icon
+          class="icon gold"
+          (click)="checkAdded()"
+          [icon]="goldenHeart"
+        ></fa-icon>
+      </ng-template>
+      <ng-template #elseBlock2>
+        <fa-icon class="icon" (click)="checkAdded()" [icon]="faHeart"></fa-icon>
+      </ng-template>
     </div>
   </div>
 </div>

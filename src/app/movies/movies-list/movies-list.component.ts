@@ -13,10 +13,16 @@ export class MoviesListComponent {
   faArrowLeft = faLessThan
   faArrowRight = faGreaterThan
 
+  movies !: Array<MovieInterface>
+
+  constructor(private http: HttpService) { }
+
+  ngOnInit() {
+    this.http.getMovies().subscribe(data => { this.movies = data.results })
+  }
 
   fakeArr(movies: number) {
     return Array(movies).fill(0)
   }
-
 
 }
