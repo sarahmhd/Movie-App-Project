@@ -1,0 +1,18 @@
+.movies-list {
+  padding-top: 3.88rem;
+  padding-bottom: 3.88rem;
+}
+
+.movies-list h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.active {
+  background: #eee;
+}
+
+.icon {
+  font-size: 0.9rem;
+}

@@ -1,1 +1,33 @@
-<p>movie-card works!</p>
+<div class="card border-0">
+  <div class="img">
+    <img
+      src="https://image.tmdb.org/t/p/w500//5gzzkR7y3hnY8AD1wXjCnVlHba5.jpg"
+      class="card-img"
+    />
+    <div class="dots">
+      <fa-icon [icon]="faEllipsis"></fa-icon>
+    </div>
+    <div class="progress blue">
+      <span class="progress-left">
+        <span class="progress-bar"></span>
+      </span>
+      <span class="progress-right">
+        <span class="progress-bar"></span>
+      </span>
+      <div class="progress-value">90%</div>
+    </div>
+  </div>
+  <div class="card-body my-3">
+    <h5 class="card-title fw-bold">
+      <a class="text-decoration-none text-black"> movie title </a>
+    </h5>
+    <div class="card-Texts d-flex justify-content-between align-items-center">
+      <p class="card-text date text-muted m-0">29 sep , 2023</p>
+      <fa-icon
+        class="icon gold"
+        (click)="checkAdded()"
+        [icon]="goldenHeart"
+      ></fa-icon>
+    </div>
+  </div>
+</div>
