@@ -1,1 +1,227 @@
-<p>movie-details works!</p>
+<!-- <div class="main"> -->
+<!-- <div class="details"> -->
+<!-- <div class="container"> -->
+<!-- <div class="details-content"> -->
+<!-- <div -->
+<!-- class="card-details d-flex justify-content-between align-items-start" -->
+<!-- [id]="movie.id" -->
+<!-- > -->
+<!-- <div class="col-sm-12 col-md-4"> -->
+<!-- <div class="mx-2 h-100"> -->
+<!-- <div class="img_poster"> -->
+<!-- <img -->
+<!-- [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" -->
+<!-- class="w-100 h-100 d-block poster rounded-5" -->
+<!-- /> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class="col-sm-12 col-md-8"> -->
+<!-- <div -->
+<!-- class="details-header d-flex justify-content-between align-items-start mx-4" -->
+<!-- > -->
+<!-- <div class="header"> -->
+<!-- <div -->
+<!-- class="heading d-flex justify-content-between align-items-center" -->
+<!-- > -->
+<!-- <h2 class="original_title">{{ movie.original_title }}</h2> -->
+<!-- <div class="heart-icon"> -->
+<!-- <fa-icon [icon]="faHeart"></fa-icon> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <p class="release_date text-muted"> -->
+<!-- {{ movie.release_date | date }} -->
+<!-- </p> -->
+<!-- <div class="rating d-flex align-items-center"> -->
+<!-- <div class="stars gap-1 d-flex align-items-center"> -->
+<!-- <div -->
+<!-- class="star-icon" -->
+<!-- *ngFor=" -->
+<!-- let item of fakeArr((movie.vote_average * 5) / 10) -->
+<!-- " -->
+<!-- > -->
+<!-- <fa-icon [icon]="faStar"></fa-icon> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <p class="m-0">{{ movie.vote_count }}</p> -->
+<!-- </div> -->
+<!-- <p class="overview"> -->
+<!-- {{ movie.overview }} -->
+<!-- </p> -->
+<!-- <div class="badges"> -->
+<!-- <span -->
+<!-- *ngFor="let genre of movie.genres" -->
+<!-- class="badge rounded-pill text-bg-warning mx-2 py-2 px-3" -->
+<!-- >{{ genre.name }}</span -->
+<!-- > -->
+<!-- </div> -->
+<!-- <!-- <div class="badges"> -->
+<!-- <span -->
+<!-- class="badge rounded-pill text-bg-warning mx-2 py-2 px-3" -->
+<!-- >Action</span -->
+<!-- > -->
+<!-- <span -->
+<!-- class="badge rounded-pill text-bg-warning mx-2 py-2 px-3" -->
+<!-- >Crime</span -->
+<!-- > -->
+<!-- <span -->
+<!-- class="badge rounded-pill text-bg-warning mx-2 py-2 px-3" -->
+<!-- >Thriller</span -->
+<!-- > -->
+<!-- </div> -->
+-->
+<!-- <div class="about d-flex justify-content-start ms-2 my-3"> -->
+<!-- <p class="me-5"> -->
+<!-- <span class="fw-bold me-3">Duration:</span> -->
+<!-- {{ movie.runtime }}Min.. -->
+<!-- </p> -->
+<!-- <p> -->
+<!-- <span class="fw-bold me-3">Languages:</span> -->
+<!-- <span *ngFor="let lang of movie.spoken_languages" -->
+<!-- >{{ lang.name }} -->
+<!-- </span> -->
+<!-- </p> -->
+<!-- </div> -->
+<!-- <div -->
+<!-- class="production-company col-3 d-flex align-items-end gap-2" -->
+<!-- > -->
+<!-- <div -->
+<!-- class="img d-flex justify-content-center align-items-center" -->
+<!-- *ngFor="let comp of movie.production_companies" -->
+<!-- > -->
+<!-- <img -->
+<!-- *ngIf="comp.logo_path" -->
+<!-- [src]=" -->
+<!-- 'https://image.tmdb.org/t/p/w500/' + comp.logo_path -->
+<!-- " -->
+<!-- [alt]="comp.name" -->
+<!-- /> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <a -->
+<!-- [href]="movie.homepage" -->
+<!-- target="_blank" -->
+<!-- class="website text-decoration-none text-black d-flex align-items-center gap-2 btn btn-outline-warning rounded-pill link-dark my-4" -->
+<!-- > -->
+<!-- Website -->
+<!-- <div class="icon"> -->
+<!-- <fa-icon [icon]="faLink"></fa-icon> -->
+<!-- </div> -->
+<!-- </a> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<div class="main">
+  <div class="details">
+    <div class="container">
+      <div class="details-content">
+        <div
+          class="card-details d-flex justify-content-between align-items-start"
+        >
+          <div class="col-sm-12 col-md-4">
+            <div class="mx-2 h-100">
+              <div class="img_poster">
+                <img
+                  src="https://image.tmdb.org/t/p/w500//qA5kPYZA7FkVvqcEfJRoOy4kpHg.jpg"
+                  class="w-100 h-100 d-block poster rounded-5"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-8">
+            <div
+              class="details-header d-flex justify-content-between align-items-start mx-4"
+            >
+              <div class="header">
+                <div
+                  class="heading d-flex justify-content-between align-items-center"
+                >
+                  <h2 class="original_title">movie.original_title</h2>
+                  <div class="heart-icon">
+                    <fa-icon [icon]="faHeart"></fa-icon>
+                  </div>
+                </div>
+                <p class="release_date text-muted">movie.release_date</p>
+                <div class="rating d-flex align-items-center">
+                  <div class="stars gap-1 d-flex align-items-center">
+                    <div class="star-icon">
+                      <fa-icon [icon]="faStar"></fa-icon>
+                    </div>
+                    <div class="star-icon">
+                      <fa-icon [icon]="faStar"></fa-icon>
+                    </div>
+                    <div class="star-icon">
+                      <fa-icon [icon]="faStar"></fa-icon>
+                    </div>
+                    <div class="star-icon">
+                      <fa-icon [icon]="faStar"></fa-icon>
+                    </div>
+                    <div class="star-icon">
+                      <fa-icon [icon]="faStar"></fa-icon>
+                    </div>
+                  </div>
+                  <p class="m-0">movie.vote_count</p>
+                </div>
+                <p class="overview">movie.overview</p>
+                <div class="badges">
+                  <span
+                    class="badge rounded-pill text-bg-warning mx-2 py-2 px-3"
+                  >
+                    genre.name
+                  </span>
+                  <span
+                    class="badge rounded-pill text-bg-warning mx-2 py-2 px-3"
+                  >
+                    genre.name
+                  </span>
+                  <span
+                    class="badge rounded-pill text-bg-warning mx-2 py-2 px-3"
+                  >
+                    genre.name
+                  </span>
+                </div>
+                <div class="about d-flex justify-content-start ms-2 my-3">
+                  <p class="me-5">
+                    <span class="fw-bold me-3">Duration:</span>
+                    110Min.
+                  </p>
+                  <p>
+                    <span class="fw-bold me-3">Languages:</span>
+                    <span>English </span>
+                  </p>
+                </div>
+                <div
+                  class="production-company col-3 d-flex align-items-end gap-2"
+                >
+                  <div
+                    class="img d-flex justify-content-center align-items-center"
+                  >
+                    <img
+                      src=" https://image.tmdb.org/t/p/w500//qA5kPYZA7FkVvqcEfJRoOy4kpHg.jpg
+                      "
+                    />
+                  </div>
+                </div>
+                <a
+                  [href]="movie.homepage"
+                  target="_blank"
+                  class="website text-decoration-none text-black d-flex align-items-center gap-2 btn btn-outline-warning rounded-pill link-dark my-4"
+                >
+                  Website
+                  <div class="icon">
+                    <fa-icon [icon]="faLink"></fa-icon>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

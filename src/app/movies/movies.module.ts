@@ -7,6 +7,8 @@ import { NgModule } from '@angular/core';
 import { RecommendatoinComponent } from './recommendatoin/recommendatoin.component';
 import { WatchListCardComponent } from './watch-list-card/watch-list-card.component';
 import { WatchListComponent } from './watch-list/watch-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,20 @@ import { WatchListComponent } from './watch-list/watch-list.component';
     MoviesListComponent,
     RecommendatoinComponent,
     WatchListCardComponent,
-    WatchListComponent
+    WatchListComponent,
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FontAwesomeModule,
+    RouterModule,
+  ],
+    exports: [
+      MovieCardComponent,
+      MovieDetailsComponent,
+      MoviesListComponent,
+      RecommendatoinComponent,
+      WatchListCardComponent,
+      WatchListComponent
+    ]
 })
 export class MoviesModule { }
