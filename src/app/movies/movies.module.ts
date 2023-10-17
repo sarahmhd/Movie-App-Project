@@ -5,6 +5,7 @@ import { MovieDetailsCardComponent } from './movie-details-card/movie-details-ca
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { NgModule } from '@angular/core';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { RecommendatoinComponent } from './recommendatoin/recommendatoin.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
@@ -24,16 +25,17 @@ import { WatchListComponent } from './watch-list/watch-list.component';
   imports: [
     CommonModule,
     FontAwesomeModule,
+    NgxPaginationModule,
     RouterModule,
     SharedModule
   ],
-    exports: [
-      MovieCardComponent,
-      MovieDetailsComponent,
-      MoviesListComponent,
-      RecommendatoinComponent,
-      WatchListCardComponent,
-      WatchListComponent
-    ]
+  exports: [
+    MovieCardComponent,
+    MovieDetailsComponent,
+    MoviesListComponent,
+    RecommendatoinComponent,
+    WatchListCardComponent,
+    WatchListComponent
+  ]
 })
 export class MoviesModule { }

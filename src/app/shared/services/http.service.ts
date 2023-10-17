@@ -8,11 +8,12 @@ import { Injectable } from '@angular/core';
 })
 export class HttpService {
 
+  page: number = 1
 
   constructor(private http: HttpClient) { }
 
   getMovies(): Observable<any> {
-    return this.http.get(`https://api.themoviedb.org/3/movie/popular?api_key=38e4b66e657f3d989c1734581f25c5e7`)
+    return this.http.get(`https://api.themoviedb.org/3/movie/popular?api_key=38e4b66e657f3d989c1734581f25c5e7&page=${this.page}`)
   }
 
   getMovieDetails(id: number | string): Observable<any> {
@@ -23,4 +24,15 @@ export class HttpService {
     return this.http.get(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=38e4b66e657f3d989c1734581f25c5e7`)
   }
 
+  getSearchedProducts(val: string): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=38e4b66e657f3d989c1734581f25c5e7&query=${val}`)
+  }
+
+  setNumber(pageNum: number) {
+    this.page = pageNum;
+  }
+
+  getNumber() {
+    return this.page
+  }
 }

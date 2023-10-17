@@ -13,6 +13,7 @@ export class RecommendatoinComponent {
   @Input() movie!: MovieDetails
   recommendation!: Array<MovieInterface>
   // isRecommend: boolean = true
+  page: number = 1
   constructor(private http: HttpService) { }
   ngOnInit() {
     this.http.getRecommendation(this.movie.id).subscribe(data => this.recommendation = data.results)

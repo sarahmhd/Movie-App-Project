@@ -16,3 +16,47 @@
 .icon {
   font-size: 0.9rem;
 }
+.movies-list {
+  padding-top: 3.88rem;
+  padding-bottom: 3.88rem;
+}
+
+.movies-list h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.pagination ul {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+  align-items: center;
+}
+
+.pagination ul li {
+  padding: 3px 7px;
+  border-radius: 3px;
+  letter-spacing: 0.6px;
+  transition: all 0.3s;
+}
+
+.pagination ul li:not(.active, .dots):hover {
+  background: #777;
+}
+
+.active {
+  background: #eee;
+}
+
+.icon {
+  font-size: 0.9rem;
+}
+
+

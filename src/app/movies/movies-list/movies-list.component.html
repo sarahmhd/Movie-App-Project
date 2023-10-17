@@ -3,9 +3,27 @@
     <div class="movies-list-content">
       <h2>Popular Movies</h2>
       <div class="movies row">
-        <div class="col-sm-6 col-md-4 col-lg-2" *ngFor="let movie of movies">
+        <div
+          class="col-sm-6 col-md-4 col-lg-2"
+          *ngFor="
+            let movie of movies
+              | paginate
+                : {
+                    id: 'movies',
+                    itemsPerPage: 12,
+                    currentPage: page,
+                    totalItems: totalPages
+                  }
+          "
+        >
           <app-movie-card [movie]="movie"></app-movie-card>
         </div>
+      </div>
+      <div class="pagination">
+        <pagination-controls
+          (pageChange)="pageChanged($event)"
+          id="movies"
+        ></pagination-controls>
       </div>
     </div>
   </div>

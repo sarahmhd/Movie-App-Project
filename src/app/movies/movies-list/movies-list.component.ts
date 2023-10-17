@@ -14,15 +14,22 @@ export class MoviesListComponent {
   faArrowRight = faGreaterThan
 
   movies !: Array<MovieInterface>
-
+  totalPages !: number
+  page: number = 1
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.http.getMovies().subscribe(data => { this.movies = data.results })
+    this.http.getMovies().subscribe(data => { this.totalPages = data.total_pages; this.movies = data.results })
+    this.page = this.http.getNumber()
   }
 
   fakeArr(movies: number) {
     return Array(movies).fill(0)
   }
 
+  pageChanged(e: any) {
+    this.page = e;
+    this.http.setNumber(e)
+    this.http.getMovies().subscribe(data => { this.movies = data.results })
+  }
 }

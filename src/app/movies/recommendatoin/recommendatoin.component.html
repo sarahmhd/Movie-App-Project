@@ -6,7 +6,13 @@
         class="col-sm-6 col-md-4 col-lg-2"
         *ngFor="
           let movie of recommendation
+            | paginate
+              : {
+                  id: 'recommend',
+                  itemsPerPage: 6,
+                  currentPage: page,
 
+                }
         "
         [ngClass]="
           movie.poster_path || movie.backdrop_path ? 'd-block' : 'd-none'
@@ -17,6 +23,12 @@
       <!-- <p [ngClass]="{ 'd-none': isRecommend == true }" class="fs-6 opacity-50">
         there is no recommendations
       </p> -->
+    </div>
+    <div class="pagination">
+      <pagination-controls
+        (pageChange)="page = $event"
+        id="recommend"
+      ></pagination-controls>
     </div>
   </div>
 </div>
