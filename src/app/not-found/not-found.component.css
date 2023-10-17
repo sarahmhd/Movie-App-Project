@@ -1,0 +1,33 @@
+.error-page {
+  height: 100vh;
+}
+.error-page__heading-title {
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.error-page__heading-desciption {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 200;
+}
+.error-page__button {
+  color: var(--main-color);
+  cursor: pointer;
+  text-decoration: none;
+  background: #fff;
+  box-shadow: 0 0 4px #ffe253c0;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.error-page__button:hover {
+  box-shadow: none;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.sad-icon {
+  font-size: 3.5rem;
+  color: #9c9c9c;
+}

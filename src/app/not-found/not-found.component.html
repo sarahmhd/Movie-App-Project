@@ -1,1 +1,20 @@
-<p>not-found works!</p>
+<div class="error-page d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div
+      class="error-content d-flex flex-column h-100 justify-content-center align-items-center gap-2"
+    >
+      <div class="sad-icon">
+        <fa-icon [icon]="faSadTear"></fa-icon>
+      </div>
+      <h1 class="error-page__heading-title">Looks like you're lost</h1>
+      <p class="error-page__heading-desciption">404 error</p>
+      <a
+        class="error-page__button"
+        routerLink="/"
+        aria-label="back to home"
+        title="back to home"
+        >back to home</a
+      >
+    </div>
+  </div>
+</div>
