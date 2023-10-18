@@ -7,10 +7,16 @@
       [alt]="movie.original_title"
     />
     <img
-      *ngIf="!movie.poster_path"
+      *ngIf="!movie.poster_path && movie.backdrop_path"
       [src]="'https://image.tmdb.org/t/p/w500/' + movie.backdrop_path"
       class="card-img"
       [alt]="movie.original_title"
+    />
+    <img
+      *ngIf="!movie.poster_path && !movie.backdrop_path"
+      src="https://picsum.photos/200/300"
+      class="card-img"
+      alt="fake img"
     />
     <div class="dots">
       <fa-icon [icon]="faEllipsis"></fa-icon>

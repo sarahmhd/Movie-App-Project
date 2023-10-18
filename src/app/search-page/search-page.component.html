@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="main search-page">
+  <div class="container">
+    <div class="main-content py-5">
+      <div class="form">
+        <app-search-form></app-search-form>
+      </div>
+      <div class="searched-movies">
+        <h5 class="header">
+          Search Results for : <span>{{ searchVal }}</span>
+        </h5>
+        <div class="movies row">
+          <div
+            class="col-sm-6 col-md-4 col-lg-2"
+            *ngFor="let movie of searchedArr | paginate
+                  : {
+                      id: 'movies',
+                      itemsPerPage: 12,
+                      currentPage: page,
+                    }"
+          >
+            <app-movie-card [movie]="movie"></app-movie-card>
+          </div>
+        </div>
+        <div class="pagination" ngClass="{'bg-danger'&&}">
+          <pagination-controls
+            (pageChange)="page = $event"
+            id="movies"
+          ></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
