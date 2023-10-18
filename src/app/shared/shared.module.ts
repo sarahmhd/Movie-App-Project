@@ -6,11 +6,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { LoaderComponent } from './loader/loader.component';
+import { WatchListComponent } from './watch-list/watch-list.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    LoaderComponent,
+    WatchListComponent
   ],
   imports: [
     CommonModule,

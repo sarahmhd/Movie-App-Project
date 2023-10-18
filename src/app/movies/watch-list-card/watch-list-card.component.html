@@ -1,57 +1,51 @@
-<div class="col-sm-12 col-md-6">
-  <div class="card-details d-flex justify-content-between align-items-start p-4 m-3 rounded-4">
-    <div class="col-sm-12 col-md-4">
-      <div class="mx-2 h-100">
-        <img src="https://www.themoviedb.org/t/p/w1280/yZVByCjWvKdSWcYLacoFmnOoSpm.jpg" class="w-100 d-block rounded-5 ">
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-8">
-      <div class="details-header d-flex justify-content-between align-items-start mx-4">
-        <div class="header">
-          <h2 class="original_title">Movie Name</h2>
-          <p class="release_date text-muted">Dec 12, 2018</p>
-          <div class="rating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="favorite">
-            <i class="fa-solid fa-heart text-warning"></i>
-            <i class="fa-regular fa-heart text-warning"></i>
-            <p>2889</p>
-          </div>
-          <p class="overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus deserunt at explicabo...</p>
-        </div>
+<div
+  class="card-details row justify-content-between align-items-start"
+  [id]="movie.id"
+>
+  <div class="col-lg-4">
+    <div class="mb-3 mb-lg-0 mx-2 h-100">
+      <div class="img_poster">
+        <img
+          [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path"
+          class="w-100 h-100 d-block poster rounded-5"
+        />
       </div>
     </div>
   </div>
-</div>
-<div class="col-sm-12 col-md-6">
-  <div class="card-details d-flex justify-content-between align-items-start p-4 m-3 rounded-4">
-    <div class="col-sm-12 col-md-4">
-      <div class="mx-2 h-100">
-        <img src="https://www.themoviedb.org/t/p/w1280/yZVByCjWvKdSWcYLacoFmnOoSpm.jpg" class="w-100 d-block rounded-5 ">
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-8">
-      <div class="details-header d-flex justify-content-between align-items-start mx-4">
-        <div class="header">
-          <h2 class="original_title">Movie Name</h2>
-          <p class="release_date text-muted">Dec 12, 2018</p>
-          <div class="rating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
+  <div class="col-lg-8">
+    <div
+      class="details-header d-flex justify-content-between align-items-start mx-4"
+    >
+      <div class="header">
+        <div class="heading d-flex justify-content-between align-items-center">
+          <h2 class="original_title">
+            {{ movie.original_title.slice(0, 20) }}
+          </h2>
+          <div class="icon">
+            <fa-icon
+              class="heart-icon gold"
+              (click)="checkAdded()"
+              [icon]="faHeart"
+            ></fa-icon>
           </div>
-          <div class="favorite">
-            <i class="fa-solid fa-heart text-warning"></i>
-            <i class="fa-regular fa-heart text-warning"></i>
-            <p>2889</p>
-          </div>
-          <p class="overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus deserunt at explicabo...</p>
         </div>
+        <p class="release_date text-muted">
+          {{ movie.release_date | date }}
+        </p>
+        <div class="rating d-flex align-items-center">
+          <div class="stars gap-1 d-flex align-items-center">
+            <div
+              class="star-icon"
+              *ngFor="let item of fakeArr((movie.vote_average * 5) / 10)"
+            >
+              <fa-icon [icon]="faStar"></fa-icon>
+            </div>
+          </div>
+          <p class="m-0">{{ movie.vote_count }}</p>
+        </div>
+        <p class="overview">
+          {{ movie.overview.slice(0, 150) }}
+        </p>
       </div>
     </div>
   </div>
