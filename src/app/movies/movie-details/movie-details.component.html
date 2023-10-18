@@ -4,11 +4,11 @@
     <div class="container">
       <div class="details-content">
         <div
-          class="card-details d-flex justify-content-between align-items-start"
+          class="card-details row justify-content-between align-items-start"
           [id]="movie.id"
         >
-          <div class="col-sm-12 col-md-4">
-            <div class="mx-2 h-100">
+          <div class="col-lg-4">
+            <div class="mb-3 mb-lg-0 mx-2 h-100">
               <div class="img_poster">
                 <img
                   [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path"
@@ -17,7 +17,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-8">
+          <div class="col-lg-8">
             <div
               class="details-header d-flex justify-content-between align-items-start mx-4"
             >

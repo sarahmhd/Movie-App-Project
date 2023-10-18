@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HeaderComponent } from '../shared/header/header.component';
+import { LoaderComponent } from '../shared/loader/loader.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
-import { MovieDetailsCardComponent } from './movie-details-card/movie-details-card.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { NgModule } from '@angular/core';
@@ -15,7 +16,6 @@ import { WatchListComponent } from './watch-list/watch-list.component';
 @NgModule({
   declarations: [
     MovieCardComponent,
-    MovieDetailsCardComponent,
     MovieDetailsComponent,
     MoviesListComponent,
     RecommendatoinComponent,

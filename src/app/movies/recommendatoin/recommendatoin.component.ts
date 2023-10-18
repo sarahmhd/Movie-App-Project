@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
-
-import { HttpService } from 'src/app/shared/services/http.service';
 import { MovieDetails } from 'src/app/interfaces/movie-details';
 import { MovieInterface } from 'src/app/interfaces/movie-interface';
+import { HttpService } from 'src/app/shared/services/http.service';
 
 @Component({
   selector: 'app-recommendatoin',

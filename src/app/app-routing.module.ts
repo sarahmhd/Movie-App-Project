@@ -1,11 +1,13 @@
 import { RouterModule, Routes } from '@angular/router';
 
+
+import { NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
-import { NgModule } from '@angular/core';
+import { WatchListComponent } from './movies/watch-list/watch-list.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchPageComponent } from './search-page/search-page.component';
-import { WatchListComponent } from './movies/watch-list/watch-list.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

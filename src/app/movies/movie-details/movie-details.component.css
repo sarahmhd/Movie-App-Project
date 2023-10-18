@@ -9,7 +9,6 @@ p {
 
 .production-company img {
   width: 100%;
-  height: auto;
 }
 
 .details-content {
@@ -54,6 +53,10 @@ p {
 
 .production-company .img {
   height: 2.9375rem;
+}
+
+.production-company .img img {
+  max-height: 100%;
 }
 
 .heart-icon {

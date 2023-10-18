@@ -20,4 +20,5 @@ export class SearchPageComponent {
     this.http.getSearchedProducts(this.searchVal).subscribe(data => { this.searchedArr = data.results; })
   }
 
+
 }

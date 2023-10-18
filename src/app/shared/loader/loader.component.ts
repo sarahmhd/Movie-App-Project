@@ -13,5 +13,3 @@ export class LoaderComponent {
     this.loaderService.getLoaderVal().subscribe(data => { this.isLoading = data; console.log(data) })
   }
 }
-
-

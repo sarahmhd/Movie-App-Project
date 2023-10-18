@@ -3,9 +3,9 @@ import { faEllipsis, faHeart as golden } from '@fortawesome/free-solid-svg-icons
 
 import { CounterServiceService } from 'src/app/shared/services/counter-service.service';
 import { MovieInterface } from 'src/app/interfaces/movie-interface';
-import { WatchlistService } from 'src/app/shared/services/watchlist.service';
 import { count } from 'rxjs';
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import { WatchlistService } from 'src/app/shared/services/watchlist.service';
 
 @Component({
   selector: 'app-movie-card',
