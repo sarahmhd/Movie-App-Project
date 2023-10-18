@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpService } from 'src/app/shared/services/http.service';
+import { WatchlistService } from 'src/app/shared/services/watchlist.service';
 
 @Component({
   selector: 'app-watch-list-card',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./watch-list-card.component.css']
 })
 export class WatchListCardComponent {
-
+  constructor(private watchListService:WatchlistService){}
+  ngOnInit(){
+    this.watchListService.getWatchList()
+  }
 }

@@ -1,0 +1,16 @@
+.card-details{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+img{
+  height: 250px;
+}
+p{
+  font-size: 14px;
+}
+.release_date{
+  font-size: 12px;
+}
+.overview{
+  font-size: 18px;
+}
+
