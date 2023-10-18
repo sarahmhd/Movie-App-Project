@@ -1,5 +1,21 @@
 <app-header></app-header>
-<div class="container">
-  <h2>Watch list</h2>
-<app-watch-list-card></app-watch-list-card>
+<div class="main watchlist">
+  <div class="container">
+    <div class="main-content position-relative">
+      <h2 class="fw-bold">Watch List</h2>
+      <div class="row mt-4" *ngIf="counter > 0">
+        <div class="col-md-6" *ngFor="let movie of watchListArr">
+          <app-watch-list-card [movie]="movie"></app-watch-list-card>
+        </div>
+      </div>
+      <div
+        *ngIf="counter == 0"
+        class="no_watchlist position-absolute text-capitalize d-flex flex-column justify-content-center align-items-center"
+      >
+        <fa-icon class="heart" [icon]="faHeartBroken"></fa-icon>
+        <p class="m-0">No Movies in watch list</p>
+        <button class="btn" (click)="backHome()">back to home</button>
+      </div>
+    </div>
+  </div>
 </div>
