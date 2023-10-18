@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { SharedModule } from './shared/shared.module';
+import {AuthInterceptor} from './auth.interceptor'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,12 @@ import { SharedModule } from './shared/shared.module';
     MoviesModule,
     NgxPaginationModule
   ],
-
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
